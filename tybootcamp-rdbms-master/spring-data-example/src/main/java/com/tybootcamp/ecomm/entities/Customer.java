@@ -14,6 +14,8 @@ public class Customer {
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "customer", orphanRemoval = true)
     private Profile profile;
 
+    @OneToOne
+    private Basket basket;
     @NotNull
     private String name;
 
@@ -21,7 +23,7 @@ public class Customer {
 
     }
 
-        public Customer(Long id){
+    public Customer(Long id){
         this.id=id;
     }
 
@@ -49,6 +51,10 @@ public class Customer {
         this.name = name;
     }
 
+    public Basket getBasket(){
+        return basket;
+
+    }
     @Override
     public String toString(){
         if (profile == null){
