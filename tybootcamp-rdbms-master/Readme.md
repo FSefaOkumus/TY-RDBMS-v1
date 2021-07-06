@@ -1,14 +1,16 @@
 ##Refactored
-- Customer Class'ı düzenlendi.
+- Customer Entity'si düzenlendi.
 - CustomerController Eklendi.
 - Customer ile Product Arasında OneToOne ilişkisi kuruldu.
 - Embadded annotation'ını kullanarak yapmadım onun yerine 2. bir constructor ile Customer ve Profile i ilişkilendirdim.Bunun sonucunda Profile'in kendi seller için ürettiği iterate eden id aynı zamanda Customer için de ediyor yani Tüm profilleri görmek istediğimizde Seller ve Customerların hepsine ulaşıyoruz.Ayrıca Customer kendi id 'sini üretiyor ve diğer işlemlerde (AddtoCart / Order vs) bu id üzerinden ilerliyoruz.
+- Basket Entity'si Eklendi.
+- Order Entity'si Eklendi.
 
-Basket  ve Order yapılarının İmplementasyonları üzerinde çalışıyorum.
+- BasketController Eklendi.
+- BasketRepository Eklendi. (in progress)
+
+Basket ve Order yapılarının İmplementasyonları üzerinde çalışıyorum.
 Order Controlleri şuanlık eksik.
-
-
-
 
 ## Ön şart
 
